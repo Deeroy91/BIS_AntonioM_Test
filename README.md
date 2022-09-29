@@ -63,10 +63,10 @@ Files added to Unreal content:
 
 ////////////////////////////////////////////////////////////////////////
 
-Additional thought of extras:
+Thoughts on additional and extras features and improvements that could be added to this demo:
 
-- Beeping sounds that increase frequency when almost exploding.
-- Key prompts change based on type of input (gamepad vs keyboard), additionally displayed text should be marked for Localization.
-- Flashy UI element to signal grenade location when player isn't directly looking.
+- Beeping sounds that increase in frequency when the grenade is close to exploding.
+- Flashy UI element to signal grenade location and proximity when player isn't looking at it directly. 
+- Key prompts change based on type of controller input (gamepad vs keyboard/mouse), additionally displayed text should be marked for Localization.
 
 Invested time: 48 hours
