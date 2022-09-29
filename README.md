@@ -5,7 +5,7 @@ In this demo you will find Unreal's Shooter game project, with the addition of a
 The Shooter Character was given an interaction component that detects and allows the player to interact with actors that implement Interactable interface.
 The grenade implements this interface. When detect it gets highlighted and a prompt appears. Interacting with it will increment the grenade launchers ammo count. If the weapon has full ammo, the grenade will not be picked up. 
 
-When the grenade is fired, it will explode after a certain amount of time has passed. This time can be changed on a BP of type ShooterWeapon_Projectile, "under Projectile Config" by editting "ProjectileLife" property. If the grenade hasn't exploded and the character that it was attached to dies, the grenade will simply fall to the ground and roll away until in explodes. An explosion visual and sound effect was added to improve experience. As well as impact and pick up sounds.
+When the grenade is fired, it will explode after a certain amount of time has passed. This time can be changed on a BP of type ShooterWeapon_Projectile, "under Projectile Config" by editting "ProjectileLife" property. If the grenade hasn't exploded and the character that it was attached to dies, the grenade will simply fall to the ground and roll away until in explodes. An explosion vfx and sfx was added to improve experience. As well as impact and pick up sounds.
 
 Along the default level there are some ammmo pickups for grenades that where scatterd.
 
@@ -15,7 +15,7 @@ As an extra feature, the aiming ability for the grenade launcher was replaced wi
 
 Projectiles are server authorative and use Unreal's replication and movement replication to handle client/server synchronization. Spawning and destruction are all done server side. 
 
-The actor that handles effects is also server authorative and uses unreal replication. However the particle and sound effects only run on the client side. Impact sounds are also only played on the client side.
+The actor that handles effects is also server authorative and uses unreal replication. However the vfx and sfx only run on the client side. Impact and pickup sounds are also only played on the client side.
 
 Player interaction is done by pressing the "E" key, and as mentioned before a prompt is displayed by a widget component. This widget is updated only on the client side, and when the player presses the key a RPC is sent to the server to perform a raycast and handle the pickup and following destruction of the interactable (grenade).
 
